@@ -1,0 +1,80 @@
+@import "../../assets/variables.less";
+
+.searchSection {
+  background-color: #003054;
+  position: relative;
+  padding: 3rem 0;
+  color: #fff;
+
+  &::before {
+    background-color: #003054;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    content: "";
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media @desktop {
+      align-items: stretch;
+    }
+
+    label {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+
+      @media @desktop {
+        text-align: left;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media @desktop {
+      flex-direction: row;
+      width: auto;
+    }
+
+    input {
+      height: 2.5rem;
+      padding: 0 1rem;
+
+      @media @desktop {
+        flex: 0 1 26.5rem;
+      }
+    }
+
+    button {
+      background-color: #e40321;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      height: 2.5rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      @media @desktop {
+        flex: 0 1 9.5rem;
+
+        &:hover {
+          background-color: #860314;
+        }
+      }
+    }
+  }
+}
